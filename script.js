@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ===== AUTO SLIDESHOW (5 IMAGES) ===== */
   const images = [
-    "img11.jpeg",
-    "img22.jpeg",
+    "img1.jpeg",
+    "img2.jpeg",
     "img3.jpeg",
     "img4.jpeg",
-    "img55.jpeg"
+    "img5.jpeg"
   ];
 
   let index = 0;
@@ -38,4 +38,5 @@ document.addEventListener("DOMContentLoaded", () => {
     slideImage.src = images[index];
   }, 3000); // tukar setiap 3 saat
 });
+
 
