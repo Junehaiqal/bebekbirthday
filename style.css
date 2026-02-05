@@ -1,0 +1,101 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 40px 0; 
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+/* CARD */
+.card {
+  background: white;
+  width: 380px;
+  height: 800px;              
+  padding: 24px;
+  border-radius: 32px;       
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+/* SLIDESHOW (SQUARE IMAGE) */
+.slideshow {
+  width: 100%;
+  aspect-ratio: 1 / 1;        
+  overflow: hidden;
+  border-radius: 22px;
+  margin-bottom: 14px;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fade 1s ease;
+}
+
+/* FADE IMAGE */
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* TITLE */
+h1 {
+  color: #ff6f91;
+  margin: 6px 0 4px;
+  font-size: 26px;
+}
+
+h2 {
+  color: #555;
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+/* MESSAGE */
+.message {
+  font-size: 15px;           
+  line-height: 1.5;
+  color: #666;
+  text-align: center;
+}
+
+/* FLOWERS CONTAINER */
+.flowers {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* FLOWER */
+.flower {
+  position: absolute;
+  top: -40px;
+  animation: fall linear forwards;
+}
+
+/* FLOWER FALL ANIMATION */
+@keyframes fall {
+  from {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
